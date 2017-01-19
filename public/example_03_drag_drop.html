@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Example 03</title>
+		<style>
+			.dragable {
+				transition: background 250ms;
+				background: #aaa;
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				cursor: move;
+				border: 5px solid #444;
+				top: 0;
+				left: 0;
+			}
+
+			.dragable .dragging {
+				background: #555;
+				pointer-events: none;
+			}
+
+			div#drag.dragable.dragging {
+				pointer-events: none;
+			}
+
+			.drop-area{
+				transition: background 250ms;
+				padding: 0px;
+				font-size: 35px;
+				background: #007acc;
+				margin: 20px 0;
+				color: #fff;
+			}
+
+			.drop-area.dropped {
+				background:#FEE200;
+				color: black;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div class="dragable" id="drag">
+		</div>
+		<ul>
+				<li class="drop-area">Drop area</li>
+				<li class="drop-area">Drop area</li>
+		</ul>
+
+		<script src="/build/example_03_drag_drop.js"></script>
+	</body>
+</html>
